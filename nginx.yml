@@ -17,6 +17,14 @@ spec:
         image: nginx:1.14.2
         ports:
         - containerPort: 80
+        livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 80
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 80
 
 ---
 
