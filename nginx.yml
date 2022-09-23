@@ -18,13 +18,13 @@ spec:
         ports:
         - containerPort: 80
         livenessProbe:
-            httpGet:
-              path: /healthz
-              port: 80
-          readinessProbe:
-            httpGet:
-              path: /healthz
-              port: 80
+          httpGet:
+            path: /healthz
+            port: 80
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 80
 
 ---
 
